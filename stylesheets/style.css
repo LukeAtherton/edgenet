@@ -1,0 +1,98 @@
+body{
+	background:#000000;
+	color:#00FF00;
+	font-family:monospace;
+	font-size:150%;
+}
+
+.accessGranted{
+	position:absolute;
+	top:200px;
+	background:#010;
+	padding:20px;
+	border:1px solid #0F0;
+	width:300px;
+	left:50%;
+	margin-left:-150px;
+	text-align:center;
+}
+
+.accessDenied{
+	position:absolute;
+	top:200px;
+	color:#F00;
+	background:#100;
+	padding:20px;
+	border:1px solid #F00;
+	width:300px;
+	left:50%;
+	margin-left:-150px;
+	text-align:center;
+}
+
+#consoleContainer{
+	float:left;
+	width:50%;
+}
+
+#sidebar{
+	float:right;
+	width:50%;
+	height: 100%;
+}
+
+#content{
+	width: 550px;
+	height: 100%;	
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	border-left: 1px dashed #0F0;
+	text-align: center;
+	vertical-align: center;
+}
+
+.fixed {  
+	width: 550px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	border-left: 1px dashed #0F0;
+	position: fixed;
+	text-align: center;
+	vertical-align: center;	
+}
+
+#cameraFrame{
+	margin-top:30px;
+	width: 640px;
+	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.folder{
+	padding-left:1em;
+}
+
+.app{
+	padding-left:1em; color:#F60;
+}
+
+.locked{
+	padding-left:1em; color:#333;
+	text-decoration:line-through;
+}
+
+#camera{
+	height:600px;
+	width:600px;
+}
+
+#loading{
+	padding-top: 200px;
+	padding-bottom: 200px;
+	position: fixed;
+	padding-left: 200px;
+}

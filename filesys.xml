@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<security type="file">
+		<cameras type="file">
+			<camera1 type="app"></camera1>
+			<camera2 type="app"></camera2>
+			<camera3 type="app"></camera3>
+			<camera4 type="app"></camera4>
+			<camera5 type="app"></camera5>
+		</cameras>
+	</security>
+	<fileB type="file"></fileB>
+	<fileC type="locked"></fileC>
+	<login type="app"></login>
+	<program type="app"></program>
+</root>
+
+<?xml version="1.0" encoding="utf-8" ?> <root> <security type="file"> <cameras type="file"> <camera1 type="app"></camera1> <camera2 type="app"></camera2> <camera3 type="app"></camera3> <camera4 type="app"></camera4> <camera5 type="app"></camera5> </cameras> </security> <fileB type="file"></fileB> <fileC type="locked"></fileC> <login type="app"></login> <program type="app"></program> </root>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>_EdgeNet</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  
+  
+  <!-- Included CSS Files (Compressed) -->
+  <!--<link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">-->
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+
+  <script src='script.js' type='text/javascript'></script> 
+  <script>
+
+    window.setInterval(setCameraSources, 10000);
+
+    function setCameraSources(){
+
+      $('#cameraFrame3').attr('src', 'cameraSource3.html');
+    }
+
+    
+  </script>
+</head>
+<body>
+
+  <!-- Header and Nav -->
+
+  <nav class="top-bar">
+    <ul>
+      <!-- Title Area -->
+      <li class="name">
+        <h1>
+          <a href="#">
+            _EdgeNet
+          </a>
+        </h1>
+      </li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+
+    <section>
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li class="divider"></li>
+        <li><a href="console.html">Console</a></li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a class="active" href="#">Cameras</a>
+          <ul class="dropdown">
+            <li><label>Level 1</label></li>
+            <li><a href="camera1.html" class="">Camera 1</a></li>
+            <li><a href="camera2.html">Camera 2</a></li>
+            <li><a href="camera3.html">Camera 3</a></li>
+            <li class="divider"></li>
+            <li><label>Basement</label></li>
+            <li><a href="camera4.html">Camera 4</a></li>
+            <li><a href="camera5.html">Camera 5</a></li>
+            <li><a href="camera6.html">Camera 6</a></li>
+            <li class="divider"></li>
+            <li><a href="index.html">Show All</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+      </ul>
+    </section>
+  </nav>
+
+
+  <!-- End Header and Nav -->
+
+  <!-- Main Grid Section -->
+
+  <div class="row">
+
+    <div class="three columns">
+
+    </div>
+    <div class="six columns">
+      <div class="panel">
+        <h5>Camera 3</h5>
+        <iframe id="cameraFrame3" class="cameraFrame" src="cameraSource3.html" style="margin:0px; padding:0px; overflow:hidden; background-image: url('./images/static/static5.gif');" scrolling="no"></iframe>
+      </div>
+    </div>
+    <div class="three columns">
+
+    </div>
+
+  </div>
+
+
+  <!-- End Grid Section -->
+
+
+
+  <!-- Footer -->
+
+  <footer class="row">
+    <div class="twelve columns">
+      <hr />
+      <div class="row">
+        <div class="six columns">
+          <p>&copy; EdgeNet Security Systems - "All Your Base Are Belong To Us" since 1991</p>
+        </div>
+        <!--<div class="six columns">
+          <ul class="link-list right">
+            <li><a href="#">Section 1</a></li>
+            <li><a href="#">Section 2</a></li>
+            <li><a href="#">Section 3</a></li>
+            <li><a href="#">Section 4</a></li>
+          </ul>
+        </div>-->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  
+  <script src="javascripts/jquery.js"></script>
+  
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+  
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+  
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+  
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+  
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+  
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+  
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+  
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+  
+  <script src="javascripts/jquery.placeholder.js"></script>
+  
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+  
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+  
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+  
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+  
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+</body>
+</html>
