@@ -2,12 +2,15 @@
 var path;
 var inputArray;
 var cursorAt = 0;
+var showPath = true;
 
-var filesys = '<?xml version="1.0" encoding="utf-8" ?> <edgenet> <security type="folder"> <cameras type="folder"> <camera1 type="app"></camera1> <camera2 type="app"></camera2> <camera3 type="app"></camera3> <camera4 type="app"></camera4> <camera5 type="app"></camera5> <camera6 type="app"></camera6> </cameras> </security> <fileB type="folder"></fileB> <fileC type="locked"></fileC> <login type="app"></login> <program type="app"></program> </edgenet>';
+var filesys = '<?xml version="1.0" encoding="utf-8" ?> <edgenet> <security type="folder"> <cameras type="folder"> <camera1 type="app"></camera1> <camera2 type="app"></camera2> <camera3 type="app"></camera3> <camera4 type="app"></camera4> <camera5 type="app"></camera5> <camera6 type="app"></camera6> </cameras> </security> <login type="app"></login> </edgenet>';
 
 xmlDoc = $.parseXML(filesys),
 $xml = $( xmlDoc ),
 $title = 'edgeNet';
+
+var accessed = false;
 
 function openSidebar(cameraSource) {
 
@@ -251,15 +254,40 @@ $(document).unbind('keydown').bind('keydown', function (event) {
 				default:
 					closeSidebar();
 				}
+
+				if (inputArray[0] == "Y" || inputArray[0] =="y"){
+                    if (accessed){
+                        var newDiv = "<div id='output' class='app'>CONTROL SYSTEM ITEM 1 DEACTIVATING.  <audio autoplay='true'>  <source src='audio/forklift.wav' type='audio/wav'> </audio></div>";
+						$("#consoleContainer").append(newDiv);
+						window.scrollBy(0,$("#output").height());
+						$("#output").attr("id", "");
+                    }
+				}
+				if (inputArray[0] == "N" || inputArray[0] =="n"){
+                     if (accessed){
+                        var newDiv = "<div id='output' class='app'>ARE YOU SURE. <br > DO YOU WISH TO DEACTIVATE CONTROL MECHANISM 1 OF 3? Y/N  </audio></div>";
+						$("#consoleContainer").append(newDiv);
+						window.scrollBy(0,$("#output").height());
+						$("#output").attr("id", "");
+					}       
+				}
 				
 				if(inputArray[0] == "login"){
 					$xml.find(path[path.length-1]).eq(0).children(inputArray[0]).each(function() {
-						if(inputArray[1] == "password"){
+						if(inputArray[1] == "HOST_EPSILON"){
 							var ddiv=$("<div id='gran'>").html(""); // create new blank div and id "gran"
 							ddiv.addClass("accessGranted"); // add class to the div
 							ddiv.html("<h1>ACCESS GRANTED</h1>"); // set content of div
 							$(document.body).prepend(ddiv); // prepend div to body
-							$("#gran").fadeOut(1500);
+							$("#gran").fadeOut(3000);
+						 	var newDiv = "<div  id='output'> <pre>           ./\\.<br />        ./ /  \\ \\.<br />      ./  /    \\  \\.<br />     /___/______\\___\\<br />    |   /\\      /\\   |<br />    |  /  \\    /  \\  |<br />    | /    \\  /    \\ |<br />    |/______\\/______\\|<br />     \\.     ||     ./<br />      \\..   ||  ../<br />         \\__||__/<br />          (____)  <br />   <br /></pre> **************************************<br /><br/ >WELCOME TO THE HOST COMPUTER MAINFRAME TERMINAL 1. <br/ ><br/ >DO YOU WISH TO DEACTIVATE CONTROL MECHANISM 1 OF 3? Y/N <br/ >   </div>";
+							accessed = true;
+												 
+							$("#consoleContainer").append(newDiv);
+							window.scrollBy(0,$("#output").height());
+							$("#output").attr("id", "");
+
+							showPath = false;
 						}else{
 							var ddiv=$("<div id='deni'>").html(""); // create new blank div and id "deni"
 							ddiv.addClass("accessDenied");// add class to the div
@@ -272,10 +300,16 @@ $(document).unbind('keydown').bind('keydown', function (event) {
 				
 				$("#console").attr("id", "last");
 				window.scrollBy(0,$("#last").height());
-				$("#consoleContainer").append("<div id='console' class='command'>" + tempPath + "></div>");
+
+				if(showPath){
+					$("#consoleContainer").append("<div id='console' class='command'>" + tempPath + "></div>");
+				}else{
+					$("#consoleContainer").append("<div id='console' class='command'>></div>");
+				}
+				
 				window.scrollBy(0,$("#console").height());
-				//cursorAt++;
 				doPrevent = true;
+				showPath = true
 			}
 			break;
 		case 190:
